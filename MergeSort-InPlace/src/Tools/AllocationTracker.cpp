@@ -46,7 +46,7 @@ void AllocationTracker::Reset()
 void AllocationTracker::DeleteArray(void* memoryAddress, size_t size)
 {
 	AllocationTracker::Get().Del(size * 4);
-	delete[](int*)memoryAddress;
+	delete[] memoryAddress;
 }
 
 AllocationTracker& AllocationTracker::Get()
